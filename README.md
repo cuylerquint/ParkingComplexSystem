@@ -4,7 +4,7 @@ This code base is a solution to the task defined in *ParkingChallenge.txt*.
 Before continuing please review the *ParkingChallenge.txt* to understand
 the problem statement.
 
-##Design/Assumptions
+## Design/Assumptions
 - Time definitions for customer tickets are stamped on call to park and unpark granted
 there parameters are valid
 
@@ -31,11 +31,11 @@ there parameters are valid
   rows and spaces as seen in *ParkingChallenge.txt*.  This backend is will parse
   a text in the following format a make a ParkingComplex with the values denoted.
   config_text_path proper format:
-    line 1:(Str):'ParkingComplex Name',(Int): Number of levels wanted
-    for level_line in range(0,line1[1]):
-      next_line = (Int):level_line_rows,(Int):level_line_spaces
-      for parking_space in range(0,row_space_line[0] * rows_space_line[1])
-        next_line = (Str): Type of parking space at level[i][j] #this is limited to ["handicap","compact","large"]
+  line 1:(Str):'ParkingComplex Name',(Int): Number of levels wanted
+  for level_line in range(0,line1[1]):
+  next_line = (Int):level_line_rows,(Int):level_line_spaces
+  for parking_space in range(0,row_space_line[0] * rows_space_line[1])
+  next_line = (Str): Type of parking space at level[i][j] #this is limited to ["handicap","compact","large"]
 
   e.g. redwood.txt:
   Redwood,3 # complex name = redwood, levels = 3
