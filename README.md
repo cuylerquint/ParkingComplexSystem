@@ -6,7 +6,7 @@ the problem statement.
 
 ## Design/Assumptions
 - Time definitions for customer tickets are stamped on call to park and unpark granted their parameters are valid
-
+ 
 
 - init() is called once per park_unpark module process
 
@@ -34,8 +34,8 @@ the problem statement.
   config-text-path proper format: <br />
   * first-line:(Str):'ParkingComplex Name',(Int): Number of levels wanted
   * for level-line in range(0,first-line[1]):
-     * next-line = (Int):level-line-rows,(Int):level-line-spaces
-         * for parking-space in range(0,row-space-line[0] * rows-space-line[1])
+     * next-line = (Int):level-line-rows,(Int):level-line-spaces 
+         * for parking-space in range(0,row-space-line[0] * rows-space-line[1]) 
              * next_line = (Str): Type of parking space at level[i][j] #this is limitedto["handicap","compact","large"]
 
   e.g. : redwood.txt: <br />
@@ -50,8 +50,7 @@ the problem statement.
 
 
 ## Running
-  currently this is only configured to run from the Tests.py which
-  utilizes the build in unittest module
+  Currently this is only configured to run from the Tests.py which utilizes the unittest module
 
   to run:
   python Tests.py
