@@ -1,0 +1,45 @@
+Task: Implementation (Parking)
+You need to create the backend for a new computerized management system for a
+parking garage. When customers enter the garage, the system detects their car
+size and automatically generates a ticket with a parking space number and
+directions to the space. When leaving the garage, the driver provides the ticket
+and credit card, and is charged accordingly.
+
+The garage provides three levels of parking.
+Level one has six rows
+  - rows one and two are for handicapped parking,
+    the remaining four rows are for compact size parking.
+
+The remaining levels each have eight rows
+  - the first four rows with compact size parking and the last four
+    rows have large vehicle parking. Each row contains ten parking
+    spaces of equal size.
+
+Each parking size is charged in 15 minute intervals as follows:
+  - compact car parking spaces: $5/hr. For compact cars only.
+  - large car parking spaces: $7.50/hr. For large or compact cars.
+  - handicapped parking spaces: $5/hr. For handicapped placard holders only.
+
+If no handicapped spaces are available,
+a regular large or compact (as appropriate) space may be provided instead.
+Handicapped placard holders are always charged $5/hr, even if given a large space.
+
+Your task is to implement, in Python 2.7, the functions park(), unpark(),
+and init() in the provided file park_unpark.py.
+Doc-strings in this file give details about the parameters and returned values
+expected for these functions. Also, please use any constants defined in this
+file in your solution. Parking management has decreed that when selecting
+parking spaces the most appropriate space is always the cheapest available space
+for the vehicle.
+
+Also, spaces closest to the entrance should be preferred
+(assume lower levels, rows and spaces are closest to the entrance
+- eg: level 1 row 4 space 5 is closer than level 2 row 3 space 1).
+When charging customers, always round the time up to the nearest 15 minutes and
+round up to the nearest penny.
+
+Also be aware that park() and unpark() will be called from a legacy
+multi-threaded API that is triggered by the ticket machines
+when cars enter and leave. init() is called on system startup. Make reasonable
+assumptions (and document these) when requirements are not clear. Your code
+should return precise results and also reflect your best design and coding practices.
